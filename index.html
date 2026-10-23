@@ -66,26 +66,10 @@
       <h2>Seu trabalho merece ser encontrado.</h2>
       <p class="section-description">Sites de uma única página para profissionais que querem divulgar seus serviços na internet.</p>
       <div class="audience-grid">
-        <article class="audience-card">
-          <span class="card-icon">✿</span>
-          <h3>Diaristas</h3>
-          <p>Apresente seus serviços, pacotes e formas de agendamento.</p>
-        </article>
-        <article class="audience-card">
-          <span class="card-icon">⌁</span>
-          <h3>Eletricistas</h3>
-          <p>Mostre seus serviços e facilite os pedidos de orçamento.</p>
-        </article>
-        <article class="audience-card">
-          <span class="card-icon">⌂</span>
-          <h3>Encanadores</h3>
-          <p>Divulgue seu trabalho e as regiões em que atende.</p>
-        </article>
-        <article class="audience-card">
-          <span class="card-icon">♡</span>
-          <h3>E muito mais</h3>
-          <p>Manicures, técnicos, autônomos e outros prestadores de serviços.</p>
-        </article>
+        <article class="audience-card"><span class="card-icon">✿</span><h3>Diaristas</h3><p>Apresente seus serviços, pacotes e formas de agendamento.</p></article>
+        <article class="audience-card"><span class="card-icon">⌁</span><h3>Eletricistas</h3><p>Mostre seus serviços e facilite os pedidos de orçamento.</p></article>
+        <article class="audience-card"><span class="card-icon">⌂</span><h3>Encanadores</h3><p>Divulgue seu trabalho e as regiões em que atende.</p></article>
+        <article class="audience-card"><span class="card-icon">♡</span><h3>E muito mais</h3><p>Manicures, técnicos, autônomos e outros prestadores de serviços.</p></article>
       </div>
     </div>
   </section>
@@ -99,22 +83,10 @@
         <a href="#" class="text-link whatsapp-link" data-message="Olá! Gostaria de conversar sobre a criação de um site personalizado para meu negócio.">Vamos conversar →</a>
       </div>
       <div class="benefit-list">
-        <article class="benefit-item">
-          <span class="check">✓</span>
-          <div><h3>WhatsApp integrado</h3><p>Botões com mensagens prontas para facilitar o contato dos seus clientes.</p></div>
-        </article>
-        <article class="benefit-item">
-          <span class="check">✓</span>
-          <div><h3>Formulário personalizado</h3><p>Podemos incluir um formulário adequado à maneira como você atende.</p></div>
-        </article>
-        <article class="benefit-item">
-          <span class="check">✓</span>
-          <div><h3>Você escolhe as cores</h3><p>O visual é personalizado de acordo com seu gosto e a identidade do seu negócio.</p></div>
-        </article>
-        <article class="benefit-item">
-          <span class="check">✓</span>
-          <div><h3>Atendimento 100% humano</h3><p>Você conversa diretamente comigo durante o desenvolvimento do seu site.</p></div>
-        </article>
+        <article class="benefit-item"><span class="check">✓</span><div><h3>WhatsApp integrado</h3><p>Botões com mensagens prontas para facilitar o contato dos seus clientes.</p></div></article>
+        <article class="benefit-item"><span class="check">✓</span><div><h3>Formulário personalizado</h3><p>Podemos incluir um formulário adequado à maneira como você atende.</p></div></article>
+        <article class="benefit-item"><span class="check">✓</span><div><h3>Você escolhe as cores</h3><p>O visual é personalizado de acordo com seu gosto e a identidade do seu negócio.</p></div></article>
+        <article class="benefit-item"><span class="check">✓</span><div><h3>Atendimento 100% humano</h3><p>Você conversa diretamente comigo durante o desenvolvimento do seu site.</p></div></article>
       </div>
     </div>
   </section>
@@ -137,7 +109,22 @@
           <li>✓ Hospedagem gratuita</li>
           <li>✓ Prazo estimado de 1 a 2 dias</li>
         </ul>
-        <p class="domain-note">* O domínio próprio é contratado e pago à parte. Formulários e outras funcionalidades devem ser combinados antes do desenvolvimento.</p>
+
+        <div class="tabela-custos">
+          <h3>Entenda os custos do seu site</h3>
+          <div class="tabela-responsiva">
+            <table class="custos-table">
+              <thead><tr><th>Item</th><th>Quem paga?</th><th>Valor</th></tr></thead>
+              <tbody>
+                <tr><td>Criação do site</td><td>Cliente</td><td class="valor-custo">R$ 50,00</td></tr>
+                <tr><td>Domínio próprio</td><td>Cliente</td><td>Pago à parte</td></tr>
+                <tr><td>Hospedagem do site</td><td>Gratuita</td><td class="valor-gratis">R$ 0,00</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="custos-observacao">O domínio é contratado e pago pelo cliente. Posso ajudar na configuração para conectar o domínio ao site. Formulários e outras funcionalidades devem ser combinados antes do desenvolvimento.</p>
+        </div>
+
         <a href="#" class="button button-primary full-button whatsapp-link" data-message="Olá! Tenho interesse em contratar um site de uma página por R$ 50 + domínio. Gostaria de saber como começar.">Quero contratar</a>
       </div>
     </div>
@@ -155,7 +142,6 @@
     </div>
   </section>
 
-  <!-- Avaliações dos clientes -->
   <section class="reviews section" id="avaliacoes">
     <div class="container reviews-container">
       <span class="section-tag">SUA OPINIÃO IMPORTA</span>
@@ -228,12 +214,9 @@
 
 <script src="script.js"></script>
 
-<!-- Firebase: avaliações dos clientes -->
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
-  import {
-    getFirestore, collection, addDoc, getDocs, query, where, serverTimestamp
-  } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+  import { getFirestore, collection, addDoc, getDocs, query, where, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
 
   const firebaseConfig = {
     apiKey: "AIzaSyBalrl6fbqweIj89o5aXzsZ7dkE1teoprg",
@@ -263,12 +246,7 @@
       const consulta = query(collection(db, "avaliacoes"), where("aprovado", "==", true));
       const resultado = await getDocs(consulta);
       const avaliacoes = resultado.docs.map(doc => doc.data());
-
-      avaliacoes.sort((a, b) => {
-        const dataA = a.criadoEm?.toMillis?.() ?? 0;
-        const dataB = b.criadoEm?.toMillis?.() ?? 0;
-        return dataB - dataA;
-      });
+      avaliacoes.sort((a, b) => (b.criadoEm?.toMillis?.() ?? 0) - (a.criadoEm?.toMillis?.() ?? 0));
 
       if (avaliacoes.length === 0) {
         const vazio = document.createElement("p");
@@ -310,9 +288,7 @@
     const nota = Number(document.getElementById("avaliacao-nota").value);
     const comentario = document.getElementById("avaliacao-comentario").value.trim();
 
-    if (nome.length < 2 || nome.length > 60 ||
-        !Number.isInteger(nota) || nota < 1 || nota > 5 ||
-        comentario.length < 5 || comentario.length > 1000) {
+    if (nome.length < 2 || nome.length > 60 || !Number.isInteger(nota) || nota < 1 || nota > 5 || comentario.length < 5 || comentario.length > 1000) {
       mostrarMensagem("Confira seu nome, a nota e o comentário.", true);
       return;
     }
@@ -328,7 +304,7 @@
         criadoEm: serverTimestamp()
       });
       formulario.reset();
-      mostrarMensagem("Obrigado por compartilhar sua experiência com a Sitejá!");
+      mostrarMensagem("Obrigado por compartilhar sua experiência com a Sitejá! 💗");
     } catch (erro) {
       console.error("Erro ao enviar avaliação:", erro);
       mostrarMensagem("Não foi possível enviar sua avaliação. Tente novamente mais tarde.", true);
